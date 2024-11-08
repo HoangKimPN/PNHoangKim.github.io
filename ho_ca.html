@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá vui nhộn</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div id="content">
+        <div id="shark"><img src="images/shark-removebg-preview (1).png" alt="Shark"></div>
+        <div id="diver1"><img src="images/diver1.png" alt="Diver"></div>
+        <div id="diver2"><img src="images/diver2.png" alt="Diver"></div>
+        <div id="fish1"><img src="images/fish1.png" alt="Fish"></div>
+        <div id="fish2"><img src="images/fish2.png" alt="Fish"></div>
+        <div id="turtle"><img src="images/turtle.png" alt="Turtle"></div>
+        <button id="audioButton"><img src="images/button-removebg-preview.png" alt="Play Audio"></button>
+        <audio id="backgroundMusic" src="images/music.mp3"></audio>
+    </div>
+</body>
+<script>
+    const audioButton = document.getElementById('audioButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    audioButton.addEventListener('click', () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+        } else {
+            backgroundMusic.pause();
+        }
+    });
+</script>
+</html>
